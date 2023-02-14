@@ -1,0 +1,478 @@
+:root{
+    --width: 250px;
+    --padding: 6px;
+    --bgcolor:rgb(52, 52, 52);
+    --hovercolor: rgb(23, 23, 23);
+    --width-collapsed: 50px;
+
+    
+    --bs-primary-rgb: 189, 93, 56;
+}
+
+
+body{
+    /*background-image: url(../imagenes/fondo_principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    background-color: rgb(226, 225, 223);
+    font-family: "Muli", arial, helvetica, sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-left: var(--width-collapsed);
+}
+
+.body-expanded{
+    margin-left: var(--width);
+}
+
+ html{
+scroll-behavior: smooth;
+ }
+
+ /*
+#main-container{
+    color: white;
+}*/
+
+#sidemenu{
+    background-color: var(--bgcolor);
+    color: white;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+#sidemenu a{
+color: white;
+text-decoration: none;
+}
+
+/*
+    HEADER
+*/
+
+#sidemenu #header{
+    box-sizing: border-box;
+    border-bottom: solid 1px var(--bgcolor);
+}
+#sidemenu #header #title{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#sidemenu #header #title, #sidemenu #header #menu-btn{
+    vertical-align: middle;
+}
+#sidemenu #header #menu-btn{
+    display: inline-block;
+}
+#sidemenu #header #menu-btn{
+    cursor: pointer;
+    padding: 10px;
+    width: var(--width-collapsed);
+    box-sizing: border-box;
+}
+
+/*PONE FONDO NEGRO CUANDO PASA CURSOR
+#sidemenu #header #menu-btn:hover{
+    background-color: var(--bgcolor);
+}*/
+
+#sidemenu #header #menu-btn .btn-menu{
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+}
+
+/*
+    PROFILE
+*/
+#sidemenu #profile{
+    border-bottom: solid 1px var(--bgcolor);
+    padding: var(--padding) 0;
+    text-align: center;
+}
+#sidemenu #profile #photo{
+    box-sizing: border-box;
+    padding: var(--padding);
+    margin: 0 auto;
+}
+
+#sidemenu #profile #photo img{
+    border-radius: 50%;
+    width: 80%;
+}
+
+#sidemenu #profile #photo, #sidemenu #profile #nombre{
+    font-size: 24px;
+    padding: var(--padding) 0;
+    overflow: hidden;
+}
+/*
+    iTEM
+*/
+#sidemenu #menu-items{
+    overflow: hidden;
+}
+#sidemenu #menu-items .item{
+    width: var(--width);
+}
+#sidemenu #menu-items .item .icon{
+    display: inline-block;
+    font-size: 26px;
+}
+
+#sidemenu #menu-items .item .title{
+  font-size: 14px;
+}
+
+
+#sidemenu #menu-items .item .icon,
+#sidemenu #menu-items .item .title{
+    /*font-size: 14px;*/
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+    margin-left: 5px;
+}
+#sidemenu #menu-items .item a{
+    display: block;
+}
+
+/*FONDO NEGRO CUANDO PASA EL CURSOR
+#sidemenu #menu-items .item a:hover{
+    background-color: var(--hovercolor);
+}*/
+
+#sidemenu #menu-items .item .icon{
+    box-sizing: border-box;
+    padding: var(--padding);
+    width: var(--width-collapsed);
+}
+#sidemenu #menu-items .item .icon img{
+    width: 100%;
+}
+#sidemenu #menu-items .item .title{
+    padding: var(--padding) 0;
+}
+#sidemenu #menu-items .item.separator{
+    height: 1px;
+    border-bottom: solid 1px var(--bgcolor);
+    margin: 15px 0;
+}
+
+.menu-expanded{
+    width: var(--width);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-expanded #header #title {
+    display: inline-block;
+    width: calc(100% - 50px);
+    margin-right: -5px;
+    padding: var(--padding);
+}
+
+.menu-expanded #header #title span{
+    width: calc(var(--width) - var(--width-collapsed) - 5px);
+    overflow: hidden;
+    /*display: inline-block;*/
+}
+
+.menu-expanded #profile #photo{
+    width: 200px;
+}
+.menu-expanded #profile #nombre{
+    width: 100%;
+}
+
+.menu-collapsed{
+    width: var(--width-collapsed);
+}
+
+.menu-collapsed #header #title{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-collapsed #profile #nombre{
+    display: none;
+}
+.menu-collapsed .item{
+    width: 100px;
+}
+
+
+
+
+/*PARA LOS ICONOS DE LAS REDES SOCIALES*/
+.social-icons .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #495057;
+  color: #fff;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+}
+.social-icons .social-icon:last-child {
+  margin-right: 0;
+}
+.social-icons .social-icon:hover {
+  background-color: #bd5d38;
+}
+
+
+
+
+
+/*LISTA DE HABILIDADES*/
+
+.icons-habilidades {
+  display: inline-block;
+  padding-left: 0;
+  list-style: none;
+  margin-top: 0px !important;
+  font-size: 70px;
+  margin-right: 20px;
+  color: #6c757d;
+}
+
+
+.mod{
+  margin-bottom: 0 !important;
+}
+
+
+
+/*
+section.resume-section {
+    /*display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    max-width: 75rem;
+  }
+
+
+  /*
+  section.resume-section .resume-section-content {
+    width: 100%;
+  }*/
+
+  /*min-height da la altura minima de la seccion)*/
+  /* @media (min-width: 768px) {*/
+    section.resume-section {
+      min-height: 80vh;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      padding-top: 3rem;
+      padding-bottom: 5rem;
+      max-width: 75rem;
+    }
+   /* }*/
+
+  .mb-0 {
+    margin-bottom: -29px;
+    margin-top: 82px;
+    font-family: "Saira Extra Condensed";
+    font-size: 5rem;
+  }
+
+  
+  .texto-principal {
+    color: #bd5d38;
+    /*--bs-text-opacity: 1;
+    color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity));*/
+  }
+
+.subtitulo {
+  font-family: "Saira Extra Condensed";
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+
+p {
+  font-size: 1.15rem;
+  font-weight: 400;
+  text-align: justify
+}
+
+
+.titulo-seccion {
+  font-size: 56px !important;
+  margin-top: -30px !important;
+  margin-bottom: 30px;
+  font-family: "Saira Extra Condensed";
+  color:#bd5d38;
+  /*--bs-text-opacity: 1;
+  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity));*/
+}
+
+.puesto{
+  font-size: 3rem !important;
+  margin-top: 0 !important;
+  margin-bottom: -10px !important;
+  margin-top: 82px;
+  font-family: "Saira Extra Condensed";
+}
+
+
+.fecha {
+  text-align: right;
+}
+  
+
+
+
+
+/*FORMULARIO DE CONTACTO*/
+
+/*SECCION IZQUIERDA*/
+
+.form-section{
+  width: 1000px;
+  height: 450px;
+  margin: 0px auto;
+  display: flex;
+
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact_info::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #495057;
+  opacity: 0.9;
+}
+
+.contact_info{
+  width: 38%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info_title,
+.info_items{
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.info_title {
+  margin-bottom: 60px;
+  font-size: 90px;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.info_title span{
+  font-size: 100px;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.info_title h2{
+  font-size: 25px;
+  text-align: center;
+}
+
+.info_items p{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin:10px 40px;
+}
+
+
+/* Formulario de contacto*/
+/* SECCION DERECHA */
+
+  .formulario{
+    width: 62%;
+    padding: 2px 40px;
+    display: inline;
+    height: 397px;
+    /*margin: 30px 0px;*/
+  }
+  
+  #nombre, #email-contacto, #asunto, #mensaje{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: static;
+    width: 460px;
+    height: 30px;
+    left: 0px;
+    margin: 16px 0px;
+    font-family: "Muli";
+    width: 100%;
+  }
+  
+    
+  #mensaje{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 140px;
+    padding-top: 10px;
+    width: 460px;
+    height: 130px;
+    margin: 16px 0px;
+  }
+  
+  #btn-enviar{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    position: static;
+    width: 144px;
+    height: 32px;
+    background: #495057;
+    margin: 16px 0px;
+    border-width: 0;
+    border: none;
+	  border-radius: 25px;
+    font-family:'Muli';
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  
+  #btn-enviar:hover{
+    background:  #bd5d38;
+}
+
+
+
